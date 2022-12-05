@@ -1,0 +1,33 @@
+.cards-list
+{
+    max-width: 650px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cards-list .card
+{
+    flex-basis: 24%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+}
+.cards-list .card img
+{
+    width: 90%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.cards-list .card .front
+{
+    position: absolute;
+    top:-100%;
+    transition: all .2s ease-in-out;
+}
+.cards-list .card.matched .front,
+.cards-list .card.show .front
+{
+    top:0 !important;
+}
